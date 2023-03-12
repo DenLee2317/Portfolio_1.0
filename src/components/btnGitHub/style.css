@@ -1,0 +1,39 @@
+.btn-outline {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size:20px;
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 10px;
+    border: 1px solid rgb(156, 34, 237);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    text-shadow:  0 0 25px rgb(156, 34, 237) ;
+    box-shadow: 0 0 25px rgb(156, 34, 237);
+    transition: all 0.3s ease-in-out;
+}
+.btn-outline{
+    background-color: rgb(156, 34, 237);
+    color: white;
+    text-shadow: 0 0 10px white;
+    box-shadow: 0 0 60px rgb(156, 34, 237);
+}
+
+.btn-outline::before{
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(156, 34, 237);
+    transform: perspective(0.2em) rotateX(10deg) scale(2.5, 0.6);
+    filter: blur(0.5em);
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+.btn-outline:hover::before{
+    opacity: 1;
+}
